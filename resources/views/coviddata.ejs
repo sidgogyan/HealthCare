@@ -1,0 +1,104 @@
+
+<div class="right_side">
+
+  <div>
+
+
+<div class="p-8 flex justify-center items-center">
+    <div class=" w-1/2 bg-white flex items-center rounded-full shadow-xl">
+      <input class="rounded-l-full w-full py-4 px-6 text-gray-700 leading-tight focus:outline-none" id="search" type="text" placeholder="Search Your Country data">
+      
+      <div class="p-4">
+        <button onClick="getdata()" class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-12 flex items-center justify-center">
+            <i class="fas fa-search"></i>
+        </button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div id="err" class="text-center text-red-300"></div>
+ 
+
+
+
+
+
+
+<div class=" grid gap-100 grid-cols-3 py-5 m-10 gap-y-20 ">
+      <!-- CARD -->
+      <div class="bg-gradient-to-t from-black via-yellow-900 to-yellow-700  h-30 w-15 md:w-80 md:rounded-3xl rounded-full shadow-md relative  md:items-start py-5 md:p-5 transition-all duration-150">
+
+        <!-- TEXTS -->
+        <div class="transform -rotate-90 md:rotate-0 align-middle text-2xl font-semibold text-gray-200 text-center m-auto md:m-0 md:mt-8">Country</div>
+  
+        <div id= Country class="transform -rotate-90 md:rotate-0 align-middle text-4xl font-semibold text-gray-200 text-center m-auto md:m-0 md:mt-8"><%=mydata.Country%></div>
+      
+        
+      </div>
+
+
+         <!-- CARD -->
+         <div class="bg-gradient-to-t from-black via-red-900 to-red-700  h-30 w-15 md:w-80 md:rounded-3xl rounded-full shadow-md relative  md:items-start py-5 md:p-5 transition-all duration-150">
+
+            <!-- TEXTS -->
+            <div class="transform -rotate-90 md:rotate-0 align-middle text-2xl font-semibold text-gray-200 text-center m-auto md:m-0 md:mt-8">TotalConfirmed</div>
+      
+            <div id= "TotalConfirmed" class="transform -rotate-90 md:rotate-0 align-middle text-4xl font-semibold text-gray-200 text-center m-auto md:m-0 md:mt-8"><%=mydata.TotalConfirmed%></div>
+          
+            
+          </div>
+
+
+              <!-- CARD -->
+         <div class="bg-gradient-to-t from-black via-green-900 to-green-700  h-30 w-15 md:w-80 md:rounded-3xl rounded-full shadow-md relative  md:items-start py-5 md:p-5 transition-all duration-150">
+
+            <!-- TEXTS -->
+            <div class="transform -rotate-90 md:rotate-0 align-middle text-2xl font-semibold text-gray-200 text-center m-auto md:m-0 md:mt-8">TotalRecovered</div>
+      
+            <div id="TotalRecovered" class="transform -rotate-90 md:rotate-0 align-middle text-4xl font-semibold text-gray-200 text-center m-auto md:m-0 md:mt-8"><%=mydata.TotalRecovered%></div>
+          
+            
+          </div>
+
+                <!-- CARD -->
+         <div class="bg-gradient-to-t from-black via-pink-900 to-pink-700  h-30 w-15 md:w-80 md:rounded-3xl rounded-full shadow-md relative  md:items-start py-5 md:p-5 transition-all duration-150">
+
+            <!-- TEXTS -->
+            <div class="transform -rotate-90 md:rotate-0 align-middle text-2xl font-semibold text-gray-200 text-center m-auto md:m-0 md:mt-8">TotalDeaths</div>
+      
+            <div  id= "TotalDeaths" class="transform -rotate-90 md:rotate-0 align-middle text-4xl font-semibold text-gray-200 text-center m-auto md:m-0 md:mt-8"><%=mydata.TotalDeaths%></div>
+          
+            
+          </div>
+
+          <div class="bg-gradient-to-t from-black via-blue-900 to-blue-700  h-30 w-15 md:w-80 md:rounded-3xl rounded-full shadow-md relative  md:items-start py-5 md:p-5 transition-all duration-150">
+
+            <!-- TEXTS -->
+            <div class="transform -rotate-90 md:rotate-0 align-middle text-2xl font-semibold text-gray-200 text-center m-auto md:m-0 md:mt-8">NewConfirmed</div>
+      
+            <div id="NewConfirmed" class="transform -rotate-90 md:rotate-0 align-middle text-4xl font-semibold text-gray-200 text-center m-auto md:m-0 md:mt-8"><%=mydata.NewConfirmed%></div>
+          
+            
+          </div>
+
+
+          <div class="bg-gradient-to-t from-black via-Red-900 to-Red-700  h-30 w-15 md:w-80 md:rounded-3xl rounded-full shadow-md relative  md:items-start py-5 md:p-5 transition-all duration-150">
+
+            <!-- TEXTS -->
+            <div class="transform -rotate-90 md:rotate-0 align-middle text-2xl font-semibold text-gray-200 text-center m-auto md:m-0 md:mt-8">Last Updated</div>
+      
+            <div  id ="date" class="transform -rotate-90 md:rotate-0 align-middle text-2xl font-semibold text-gray-200 text-center m-auto md:m-0 md:mt-8"><%=new Date().toLocaleString();%></div>
+          
+            
+          </div>
+      
+
+ 
+      
+  </div>
+
+</div>
+
+</div>

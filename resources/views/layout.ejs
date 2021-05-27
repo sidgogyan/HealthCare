@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- font awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+     />
+ <!-- google fonts -->
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+ <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="sticky ">
+        <div class="left_area">
+            <h3>Health<span>Care</span></h3>
+        </div>
+
+        <div class="right_area">
+            <%if (!user){%>
+            <a href="/login" class="login_btn">Login</a>
+            <a href="/register" class="signup_btn">Signup</a>
+            <%}else{%>
+                <div class="group ">
+                    <div
+                      class=" myprofile outline-none focus:outline-none border px-3 py-3 bg-white  flex items-center rounded-full cursor-pointer"
+                    >
+                    </div>
+                    <ul
+                      class="bg-white border rounded-sm transform scale-0 group-hover:scale-100 absolute 
+                    transition duration-150 ease-in-out origin-top min-w-32 "
+                    >
+                      <li class="rounded-sm px-3 py-1 hover:bg-gray-100">Email</li>
+                      <li class="rounded-sm px-3 py-1 hover:bg-gray-100">Password</li>
+                      <li class="rounded-sm px-3 py-1 hover:bg-gray-100">Logout</li>
+                    </ul>
+                  </div>
+                  
+                <%}%>
+        </div>
+    </header>
+    <!-- header area end -->
+
+    <!-- sidebar start -->
+    <div class="mybody">
+     <div class="sidebar sticky" >
+
+        <a href="/coviddata"><i class="fas fa-globe-asia"></i><span>Active cases</span></a>
+        <a href="/addstatus"><i class="fas fa-plus"></i><span>Add your Status</span></a>
+        <a href="/trackstatus"><i class="fas fa-chart-line"></i><span>Track your status</span></a>
+    </div>
+    <div style="flex:1">
+        <%-body%>
+    </div>
+
+    <script src="js/app.js"></script>
+
+</div> 
+    <!-- sidebar end -->
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  
+</body>
+</html>

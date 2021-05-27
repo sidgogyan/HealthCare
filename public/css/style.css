@@ -1,0 +1,143 @@
+
+/*   global style   */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  top navbar   */
+
+header {
+    background: #233e8b;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    height:60px;
+    position: sticky;
+    top:0;
+    z-index:5;
+}
+.left_area{
+    margin-left: 20px;
+}
+.right_area{
+    margin-right: 20px;
+}
+.left_area h3 {
+    color: white;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 2px;
+}
+
+.left_area span {
+    color: #907fa4;
+}
+
+.login_btn {
+    padding: 5px;
+    background: #4aa96c;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.login_btn:hover {
+    background: #77acf1;
+}
+
+.signup_btn {
+    padding: 5px;
+    background: #4aa96c;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.signup_btn:hover {
+    background: #77acf1;
+}
+
+
+/*   sidebar style  */
+
+.mybody{
+    display:flex;
+}
+
+.sidebar {
+    background-color: #867ae9;
+    padding-top: 10px;
+    width: 200px;
+    height: calc(100vh - 60px);
+    position: sticky;
+    top:0;
+    left:0;
+}
+
+.sidebar a {
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 25px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+}
+
+.sidebar a:hover {
+    background-color: #77acf1;
+}
+
+.sidebar i {
+    padding-right: 10px;
+}
+
+.sidebar span {
+    font-size: large;
+}
+
+
+.right_side{
+    overflow-y: scroll;
+    height: calc(100vh - 60px);
+}
+
+.myprofile{
+    background-image: url("../image/Screenshot\ \(77\)\ \(2\).jpg");
+    background-position: center; 
+    background-size: cover;
+    height:42px;
+    width:42px;
+    margin-right: 80px;
+}
+
+
+
+
+
+
+
+li>ul                 { transform: translatex(100%) scale(0) }
+  li:hover>ul           { transform: translatex(101%) scale(1) }
+  li > button svg       { transform: rotate(-90deg) }
+  li:hover > button svg { transform: rotate(-270deg) }
+
+  /* Below styles fake what can be achieved with the tailwind config
+     you need to add the group-hover variant to scale and define your custom
+     min width style.
+  	 See https://codesandbox.io/s/tailwindcss-multilevel-dropdown-y91j7?file=/index.html
+  	 for implementation with config file
+  */
+  .group:hover .group-hover\:scale-100 { transform: scale(1) }
+  .group:hover .group-hover\:-rotate-180 { transform: rotate(180deg) }
+  .scale-0 { transform: scale(0) }
+  .min-w-32 { min-width: 8rem }
