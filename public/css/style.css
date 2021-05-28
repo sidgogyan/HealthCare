@@ -1,29 +1,33 @@
-
 /*   global style   */
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 /*  top navbar   */
 
 header {
     background: #233e8b;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    height:60px;
+    height: 60px;
     position: sticky;
-    top:0;
-    z-index:5;
+    top: 0;
+    z-index: 5;
 }
-.left_area{
+
+.left_area {
     margin-left: 20px;
 }
-.right_area{
+
+.right_area {
     margin-right: 20px;
 }
+
 .left_area h3 {
     color: white;
     font-size: 22px;
@@ -67,8 +71,8 @@ header {
 
 /*   sidebar style  */
 
-.mybody{
-    display:flex;
+.mybody {
+    display: flex;
 }
 
 .sidebar {
@@ -77,8 +81,8 @@ header {
     width: 200px;
     height: calc(100vh - 60px);
     position: sticky;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
 }
 
 .sidebar a {
@@ -105,39 +109,60 @@ header {
     font-size: large;
 }
 
-
-.right_side{
+.right_side {
     overflow-y: scroll;
     height: calc(100vh - 60px);
 }
 
-.myprofile{
+.myprofile {
     background-image: url("../image/Screenshot\ \(77\)\ \(2\).jpg");
-    background-position: center; 
+    background-position: center;
     background-size: cover;
-    height:42px;
-    width:42px;
+    height: 42px;
+    width: 42px;
     margin-right: 80px;
 }
 
+li>ul {
+    transform: translatex(100%) scale(0)
+}
+
+li:hover>ul {
+    transform: translatex(101%) scale(1)
+}
+
+li>button svg {
+    transform: rotate(-90deg)
+}
+
+li:hover>button svg {
+    transform: rotate(-270deg)
+}
 
 
-
-
-
-
-li>ul                 { transform: translatex(100%) scale(0) }
-  li:hover>ul           { transform: translatex(101%) scale(1) }
-  li > button svg       { transform: rotate(-90deg) }
-  li:hover > button svg { transform: rotate(-270deg) }
-
-  /* Below styles fake what can be achieved with the tailwind config
+/* Below styles fake what can be achieved with the tailwind config
      you need to add the group-hover variant to scale and define your custom
      min width style.
   	 See https://codesandbox.io/s/tailwindcss-multilevel-dropdown-y91j7?file=/index.html
   	 for implementation with config file
   */
-  .group:hover .group-hover\:scale-100 { transform: scale(1) }
-  .group:hover .group-hover\:-rotate-180 { transform: rotate(180deg) }
-  .scale-0 { transform: scale(0) }
-  .min-w-32 { min-width: 8rem }
+
+.group:hover .group-hover\:scale-100 {
+    transform: scale(1)
+}
+
+.group:hover .group-hover\:-rotate-180 {
+    transform: rotate(180deg)
+}
+
+.scale-0 {
+    transform: scale(0)
+}
+
+.min-w-32 {
+    min-width: 8rem
+}
+
+#symptoms {
+    padding: 23px 23px 23px 0px;
+}
