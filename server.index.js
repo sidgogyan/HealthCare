@@ -7,6 +7,7 @@ const fetch=require('node-fetch');
 const bodyParser=require("body-parser");
 const mongoose=require("mongoose");
 const {register,login}=require("./src/controllers/authController");
+const {addstatus,trackstatus}=require("./src/controllers/statusController");
 const flash=require('express-flash');
 const session=require('express-session');
 const MongoDbStore=require('connect-mongo');
@@ -75,7 +76,9 @@ res.render("index");
 
 app.get("/trackstatus",(req,res)=>{
     res.render("trackstatus");
-    })
+})
+
+app.post("/trackstatus",trackstatus);
 
 app.get("/coviddata",async(req,res)=>{   
 async function getCovidata(){
@@ -115,6 +118,9 @@ app.get("/register",(req,res)=>{
 app.post("/register",register);
 
 app.post("/login",login);
+
+
+app.post("/addstatus",addstatus)
 
 
 

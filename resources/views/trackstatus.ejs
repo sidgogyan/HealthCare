@@ -1,6 +1,35 @@
-<div class="right_side flex flex-col items-center justify-center">
+<div class="right_side" >
+<div class="">
+    <div class=" w-full p-8 flex justify-center">
+        <form class=" w-full p-8 flex justify-center" action="/trackstatus" method="POST" >
+        <div class=" w-1/2 bg-white flex items-center rounded-full shadow-xl">
+          <input name="day" class="rounded-l-full w-full py-4 px-6 text-gray-700 leading-tight focus:outline-none" id="search" type="text" placeholder="Enter day number between 1 to 15">
+          
+          <div class="p-4">
+            <button  type="submit" class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-12 flex items-center justify-center">
+                <i class="fas fa-search"></i>
+            </button>
+            </div>
+          </div>
+        </div>
+    </form>
+    </div>
 
+    <%if(!messages.data && !messages.error){%>
+        <h1 class="text-4xl font-bold text-blue-500 text-center mt-20">Search Your Day Wise data</h1>
+   <%}else{
+    if(messages.error){%>
+       
+        <div class=" flex flex-col items-center justify-center">
     <lottie-player class=""src="https://assets10.lottiefiles.com/packages/lf20_qlwqp9xi.json"  background="transparent"  speed="1"  style="width: 600px; height: 600px;"  loop  autoplay></lottie-player>
+     </div>
 
+     <%}
 
+     else{%>
+        <h1 class="text-4xl font-bold text-blue-500 text-center mt-20">data available</h1>
+    <%}}%>
+    
+
+</div>
 </div>
